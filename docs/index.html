@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phaser 3 Starter</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+  <script type="module" crossorigin src="/assets/index.b02e69b9.js"></script>
+  <link rel="modulepreload" href="/assets/vendor.4c864b2d.js">
+  <script type="module">!function(){try{new Function("m","return import(m)")}catch(o){console.warn("vite: loading legacy build because dynamic import is unsupported, syntax error above should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}}();</script>
+</head>
+<body>
+    <div class="container">
+        <div class="firstStep card">
+          <button id="btnHostGame">HOST</button>
+          <button id="btnJoinGame">JOIN</button>
+        </div>
+        <div class="hostGame card">
+          <input type="text" id="inputHostUsername" placeholder="Username" />
+          <button id="btnHost">HOST GAME</button>
+        </div>
+        <div class="joinGame card">
+          <h2>JOIN A GAME</h2>
+          <input type="text" id="inputRoomCode" placeholder="Room Code" />
+          <input type="text" id="inputJoinUsername" placeholder="Username" />
+          <button id="btnJoin">JOIN</button>
+        </div>
+        <div class="waiting card">
+          <h1>Room Code: <span id="roomCodeLabel"></span></h1>
+          <h2>
+            To join, have your friends navigate to this page, and use the code to
+            join!
+          </h2>
+          <p>Game will start when all players are ready</p>
+          <p>
+            Players: <span id="numPlayersLabel">1</span>, Ready:
+            <span id="numPlayersReadyLabel"></span>
+          </p>
+          <button id="btnReady">READY</button>
+        </div>
+      </div>
+      <div id="game-container"></div>
+    
+  <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+  <script nomodule id="vite-legacy-polyfill" src="/assets/polyfills-legacy.4d7519d1.js"></script>
+  <script nomodule id="vite-legacy-entry" data-src="/assets/index-legacy.0e069ebb.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+</body>
+</html>

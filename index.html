@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phaser 3 Starter</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="firstStep card">
+          <button id="btnHostGame">HOST</button>
+          <button id="btnJoinGame">JOIN</button>
+        </div>
+        <div class="hostGame card">
+          <input type="text" id="inputHostUsername" placeholder="Username" />
+          <button id="btnHost">HOST GAME</button>
+        </div>
+        <div class="joinGame card">
+          <h2>JOIN A GAME</h2>
+          <input type="text" id="inputRoomCode" placeholder="Room Code" />
+          <input type="text" id="inputJoinUsername" placeholder="Username" />
+          <button id="btnJoin">JOIN</button>
+        </div>
+        <div class="waiting card">
+          <h1>Room Code: <span id="roomCodeLabel"></span></h1>
+          <h2>
+            To join, have your friends navigate to this page, and use the code to
+            join!
+          </h2>
+          <p>Game will start when all players are ready</p>
+          <p>
+            Players: <span id="numPlayersLabel">1</span>, Ready:
+            <span id="numPlayersReadyLabel"></span>
+          </p>
+          <button id="btnReady">READY</button>
+        </div>
+      </div>
+      <div id="game-container"></div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
