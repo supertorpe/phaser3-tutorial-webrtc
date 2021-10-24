@@ -2,21 +2,27 @@ import { MeshConfig, Mesh, PeerRecord, setDebug } from 'mplaynet';
 import { MainScene } from './main-scene';
 
 ///// SIGNALIGN MECHANISM /////
-// Local: for development
+// Comment/Uncomment the desired signalling mechanism
+// Local: for development ----------------------
+//*
 import { LocalSignaling } from 'mplaynet';
-// Deepstream
-//import { DeepstreamSignaling } from 'mplaynet/src/mplaynet-deepstream';
-// Firebase
-//import { FirebaseSignaling } from 'mplaynet/src/firebase-signaling';
-
-const SIGNALLER = 
-    new LocalSignaling();
-    //new DeepstreamSignaling(DEEPSTREAM_URL);
-    //new FirebaseSignaling({ // TO DO: fill firebase info
-    //    apiKey: FIREBASE_API_KEY,
-    //    authDomain: FIREBASE_AUTH_DOMAIN,
-    //    projectId: FIREBASE_PROJECT_ID
-    //});
+const SIGNALLER = new LocalSignaling();
+//*/
+// Deepstream ----------------------
+/*
+import { DeepstreamSignaling } from 'mplaynet/deepstream';
+const SIGNALLER = new DeepstreamSignaling("wss://HOST:PORT");
+//*/
+// Firebase ----------------------
+/*
+import 'firebase/compat/firestore';
+import { FirebaseSignaling } from 'mplaynet/firebase';
+const SIGNALLER = new FirebaseSignaling({ // TO DO: fill firebase info
+        apiKey: API_KEY,
+        authDomain: AUTH_DOMAIN,
+        projectId: PROJECT_ID
+    });
+//*/
 
 export class Pairings {
 

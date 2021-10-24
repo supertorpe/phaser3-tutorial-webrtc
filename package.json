@@ -6,7 +6,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "mplaynet": "^0.0.3",
+    "mplaynet": "^0.0.5",
     "phaser": "^3.55.2",
     "phaser3-rex-plugins": "^1.1.61"
   },
